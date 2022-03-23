@@ -1,0 +1,150 @@
+\let\nofiles\relax
+\documentclass[letterpaper,margin,line]{res}
+
+\usepackage{fontspec}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+%letterpaper,margin,line
+\topmargin -.25in
+\oddsidemargin -.25in
+\evensidemargin .25in
+\textwidth 5.75in
+\textheight 9.125in
+\itemsep 0in
+\parsep 0in
+
+%%% HEADERS & FOOTERS
+
+\usepackage{lastpage}
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{}\rfoot{R. Kyle Bocinsky, PhD $\cdot$ {\em biographical sketch} $\cdot$ \today ~$\cdot$ Page \thepage\ of \pageref{LastPage}}
+
+\renewcommand{\sectionfont}{\large\bfseries} % customise the layout...
+
+\usepackage{hyperref}
+%\hypersetup{breaklinks=true, pagecolor=white, colorlinks=false}
+
+\newenvironment{list1}{
+  \begin{list}{\ding{113}}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.17in}}}{\end{list}}
+\newenvironment{list2}{
+  \begin{list}{$\bullet$}{%
+      \setlength{\itemsep}{0in}
+      \setlength{\parsep}{0in} \setlength{\parskip}{0in}
+      \setlength{\topsep}{0in} \setlength{\partopsep}{0in} 
+      \setlength{\leftmargin}{0.2in}}}{\end{list}}
+
+\makeatletter 
+\newcommand\mynobreakpar{\par\nobreak\@afterheading} 
+\makeatother
+
+\usepackage{etoolbox}
+\BeforeBeginEnvironment{list1}{\mynobreakpar}
+\BeforeBeginEnvironment{list2}{\mynobreakpar}
+
+\setlength{\parskip}{0.1in}
+
+\begin{document}
+\thispagestyle{empty}
+\name{\LARGE{R. Kyle Bocinsky, PhD $\cdot$ {\em biographical sketch}\vspace*{.1in}}}
+
+\begin{resume}
+%\raggedright
+%\textwidth 5.75in
+
+\input{CV_COMPONENTS/CONTACT}
+
+\input{CV_COMPONENTS/RESEARCH_INTERESTS}
+
+\input{CV_COMPONENTS/EDUCATION}
+
+\input{CV_COMPONENTS/APPOINTMENTS}
+
+\input{CV_COMPONENTS/HONORS_AWARDS_GRANTS}
+
+\input{CV_COMPONENTS/PR_ARTICLES}
+%\input{CV_COMPONENTS/PR_BOOK_CONTRIB}
+
+%\input{CV_COMPONENTS/TECHNICAL_CONTRIB}
+%\input{CV_COMPONENTS/OTHER_PUBS}
+
+%\input{CV_COMPONENTS/WORKING_PAPERS}
+
+\input{CV_COMPONENTS/SOFTWARE}
+
+
+%\input{CV_COMPONENTS/RESEARCH_FIELD}
+
+%\input{CV_COMPONENTS/PODIUM_POSTER}
+%\input{CV_COMPONENTS/FORUM}
+
+%\input{CV_COMPONENTS/GRANTS}
+
+%\input{CV_COMPONENTS/ADDITIONAL_TRAINING}
+
+%\input{CV_COMPONENTS/TEACHING}
+
+%\input{CV_COMPONENTS/ACADEMIC_SERVICE}
+
+
+%\input{CV_COMPONENTS/PUBLIC_SERVICE}
+
+\input{CV_COMPONENTS/COMPUTER}
+
+%\input{CV_COMPONENTS/PROFESSIONAL_AFFILIATIONS}
+
+%\newpage
+%\input{CV_COMPONENTS/REFERENCES}
+
+\end{resume}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

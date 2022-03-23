@@ -1,0 +1,175 @@
+%!TEX program = xelatex 
+
+\documentclass[$size$,letterpaper]{letter}
+\usepackage[hidelinks,unicode]{hyperref}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\setsansfont[
+  Path = fonts/Roboto/,
+  Extension = .ttf,
+  Ligatures=TeX, % recommended
+   UprightFont={*-Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*-Regular},
+   BoldItalicFont={*-Italic}]{Roboto}
+\renewcommand{\familydefault}{\sfdefault}
+
+\makeatletter
+\newenvironment{thebibliography}[1]
+     {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+
+\newcommand{\citep}{\cite}
+\usepackage[nospace,superscript]{cite}
+
+\bibliographystyle{$bibstyle$}
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+\providecommand\JournalTitle[1]{#1}
+
+\usepackage[space]{grffile}
+
+\usepackage[left=0.75in,right=0.75in,top=0.75in,bottom=1in, letterpaper,footskip=0.25in]{geometry}
+
+% Adds microtypography features: character protrusion, for XeTeX.
+\usepackage{microtype}
+
+\urlstyle{rm}
+
+\frenchspacing{}        % Remove extra spaces after periods.
+\pagestyle{empty}       % Remove page numbers.
+
+$if(csl-refs)$
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+$endif$
+
+% From default template
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\newcommand\shyp{\-}
+
+\newcommand{\header}{
+    {\hypersetup{hidelinks}
+    \noindent
+    \parbox[b][0.625in][t]{6.5in}{
+%        \vspace{-0.375in}
+        \parbox[b][0.625in][t]{3.74in}
+            {\href{$head.logourl$}
+            {\includegraphics[height=1in]{$head.logo$}}}\hfill
+        \parbox[b][0.625in][t]{2in}{
+            \setlength{\baselineskip}{9pt}
+                \small
+                \textbf{$sig.name$$sig.credentials$}\vspace{6pt}\\
+                \footnotesize
+                \begin{tabular}{@{}l}
+                $head.address$\\
+                $head.city$, $head.state$ $head.zip$\vspace{3pt}\\
+                \end{tabular}
+                		
+                \begin{tabular}{@{}ll}
+				{\bf phone} & \href{tel:$head.phone$}{$head.phone$} \\            
+				{\bf email} & \href{mailto:$head.email$}{$head.email$} \\         
+				{\bf web} & \href{$head.web$}{$head.web$}  
+				\end{tabular}
+                
+                \normalsize
+            }
+        }}
+    }
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{specialfooter}{%
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \fancyfoot[C]{
+    \scriptsize{
+        {\bf $foot.line1$}\\
+        $foot.line2$\\
+        $foot.line3$
+    }
+  }
+}
+
+\signature{
+\vspace{-0.65in}
+\includegraphics[width=1.5in]{$sig.signature$}
+}
+
+\begin{document}
+\pagestyle{specialfooter}
+
+\header
+
+\vspace{0.5in}
+
+$body$
+
+$if(sig.include)$
+    \begin{minipage}[t]{6.5in}
+    \closing{Sincerely,}
+    \vspace{-0.2in}
+    \small
+    {\bf $sig.name$}{$sig.credentials$}\vspace{6pt}\\
+    {\bf $sig.title1$}, {$sig.post1$}
+    $if(sig.title2)$
+        \\
+        {\bf $sig.title2$}, {$sig.post2$}
+    $endif$
+    $if(sig.title3)$
+        \\
+        {\bf $sig.title3$}, {$sig.post3$}
+    $endif$
+    \end{minipage}
+$endif$
+
+$if(cc)$
+    cc: $for(cc)$$cc$$sep$, $endfor$
+$endif$
+
+$if(ps)$
+    $ps$
+$endif$
+
+\vspace{0.25in}
+
+\bibliography{$for(bibliography)$$bibliography$$sep$,$endfor$}
+
+\end{document}

@@ -1,0 +1,67 @@
+\documentclass[letterpaper,11pt]{letter}
+
+\usepackage{fontspec}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{anysize}
+\marginsize{0.75in}{0.75in}{0in}{0.5in}
+\usepackage{nopageno}
+
+%%% HEADERS & FOOTERS
+
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parskip}{0.1in}
+\renewcommand{\closing}[1]{\par\nobreak\vspace{\parskip}% 
+\stopbreaks
+\noindent
+\ifx\@empty\fromaddress\else
+\hspace*{\longindentation}\fi
+\parbox{\indentedwidth}{\raggedright
+    \ignorespaces #1\\[0.0in]% 
+    \ifx\@empty\fromsig
+        \fromname
+\else \fromsig \fi\strut}%
+\par}
+
+
+\signature{\includegraphics[width=1.5in]{/Users/bocinsky/IMPORTANT/WSU/RESEARCH/ArticleStyles/WSU_Letter/signature.pdf} \\ R.~Kyle Bocinsky, PhD}
+
+%\signature{R.~Kyle Bocinsky}
+%\address{R.~Kyle Bocinsky, PhD \\  
+%Washington State University \\ 
+%Pullman, WA  99164-4910 \vspace{0.1in}\\
+%{\bf phone} \hspace{0.05in} 770.362.6659 \\
+%{\bf email} \hspace{0.1in} \href{mailto:bocinsky@wsu.edu}{bocinsky@wsu.edu} \\
+%}
+
+\longindentation=0pt
+\begin{document}
+%\raggedright
+\begin{letter}{}
+
+\centerline{\includegraphics[width=7in]{/Users/bocinsky/IMPORTANT/WSU/RESEARCH/ArticleStyles/WSU_Letter/Header.pdf}}
+
+\opening{Dear Ms. Fish,}
+ 
+This letter relates my salary history since receiving my PhD in December 2014.
+
+From January 2015 to the present I have been salaried faculty at Washington State University as a post-doctoral researcher. My salary is \$45,000 per year, plus benefits totalling approximately \$15,000, including faculty health and dental insurance, a \$25,000 term life insurance policy, long-term disability insurance, and participation in the WSU retirement plan (with 100\% matching contributions) vended with TIAA-CREF. I currently receive 10 paid holidays per year, and accrue annual leave at a rate of 14.67 hours per month (approx. 22 days per year) and 8 hours of sick leave per month. Also, last year I was written into a grant proposal as a post-doc where, had it been funded, I would have had a starting salary of \$60,000 annually.
+
+According to the \href{https://www.higheredjobs.com/salary/salaryDisplay.cfm?SurveyID=24}{\bf{HigherEdJobs.com}}, as an assistant professor in the social sciences, I could expect a starting salary ranging from \$58,000 to \$68,000 plus benefits. One recent starting faculty member in the Department of Anthropology at Washington State University had a starting salary of \$64,000; another received \$75,000. In the \href{https://www.opm.gov/policy-data-oversight/pay-leave/salaries-wages/salary-tables/pdf/2015/RUS.pdf}{\bf{Federal government}}, I am qualified for positions at the GS-9 or GS-11 level, with locality-based salaries in non-urban areas ranging from \$48,000 to \$75,000 plus benefits, although positions requiring technical expertise in Geographic Information Systems or related technologies often pay considerably more.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}

@@ -1,0 +1,160 @@
+\documentclass[letterpaper,11pt]{letter}
+
+\usepackage[hidelinks,unicode]{hyperref}
+%\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{fontspec}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+%\setmainfont[Ligatures=TeX]{Georgia}
+%\setsansfont[Ligatures=TeX]{Arial}
+%\defaultfontfeatures{Ligatures=TeXd}
+%\setmainfont{Linux Libertine}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage[space]{grffile}
+\usepackage{nopageno}
+
+\usepackage[left=0.75in,right=0.75in,top=0.75in,bottom=0.75in, letterpaper,footskip=0in]{geometry}
+
+
+\makeatletter
+  \def\@texttop{}
+\makeatother
+
+\makeatletter 
+% Since we're changing the definition, use 
+% \renewcommand instead of the \newcommand: 
+\renewcommand*{\opening}[1]{\ifx\@empty\fromaddress 
+  \thispagestyle{firstpage}% 
+% The following line would put the date at the right. 
+% I change that, but also move it to a later position: 
+%    {\raggedleft\@date\par}% 
+  \else  % home address 
+    \thispagestyle{empty}% 
+    {\raggedleft\begin{tabular}{l@{}}\ignorespaces 
+      \fromaddress \\*[2\parskip]% 
+      \end{tabular}\par}% 
+  \fi 
+  {\raggedright\@date\par}% 
+  \vspace{2\parskip}% 
+  #1\par\nobreak} 
+\makeatother 
+
+
+\makeatletter
+\newenvironment{thebibliography}[1]
+     {\list{\@biblabel{\@arabic\c@enumiv}}%
+           {\settowidth\labelwidth{\@biblabel{#1}}%
+            \leftmargin\labelwidth
+            \advance\leftmargin\labelsep
+            \usecounter{enumiv}%
+            \let\p@enumiv\@empty
+            \renewcommand\theenumiv{\@arabic\c@enumiv}}%
+      \sloppy
+      \clubpenalty4000
+      \@clubpenalty \clubpenalty
+      \widowpenalty4000%
+      \sfcode`\.\@m}
+     {\def\@noitemerr
+       {\@latex@warning{Empty `thebibliography' environment}}%
+      \endlist}
+\newcommand\newblock{\hskip .11em\@plus.33em\@minus.07em}
+\makeatother
+
+\makeatletter
+  \def\@texttop{}
+\makeatother
+
+%\usepackage[hidelinks]{hyperref}
+
+\usepackage[nospace,superscript]{cite}
+\bibliographystyle{../PAPERS/BibtexStyles/Naturemag_ext}
+% Remove brackets from numbering in List of References
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+\signature{
+\vspace{-0.65in}
+\includegraphics[width=1.5in]{../PAPERS/ArticleStyles/CCAC_Letter/signature.pdf} \\
+\vspace{-0.3in}
+\small
+{\bf R.~Kyle Bocinsky}, PhD, RPA
+}
+
+%\signature{R.~Kyle Bocinsky}
+\address{\vspace{0.75in}
+}
+
+\longindentation=0pt
+
+\usepackage{fancyhdr}
+
+\fancypagestyle{specialfooter}{%
+  \fancyhf{}
+  \renewcommand\headrulewidth{0pt}
+  \fancyfoot[C]{\scriptsize{\emph{Providing high-quality, timely, relevant, and scientifically based climate information and services to Montanans}\\
+  Montana Forest \& Conservation Experiment Station, University of Montana\\32 Campus Drive, Missoula, MT 59812 • 406.243.6793 • \href{https://climate.umt.edu/}{https://climate.umt.edu}
+  }}
+}
+
+
+\begin{document}
+%\pagestyle{specialfooter}
+
+%\raggedright
+\begin{letter}{}
+
+\includegraphics[width=2in]{../PAPERS/ArticleStyles/MCO_Letter/MCO_logo.pdf}
+
+\vspace{-1.1in}
+
+\opening{Dear members of the search committee:}
+
+I am applying to be among the inaugural cohort of Teaching, Research, and Mentoring Fellows in the Davidson Honors College at the University of Montana. I am an archaeologist who specializes in cross-disciplinary, computational approaches to studying human dimensions of climate change, with a particular focus on sustainable, high-elevation agricultural systems on the Tibetan Plateau in southeastern Asia and the Colorado Plateau in the southwestern United States. I completed my PhD at Washington State University in 2014, and was a post-doctoral researcher at WSU as part of an interdisciplinary, National Science Foundation-sponsored project to make paleoenvironmental data more widely available to researchers and the public. I am currently a research associate at the Crow Canyon Archaeological Center in Cortez, Colorado, and adjunct research faculty in the Department of Anthropology at WSU. My deeply interdisciplinary research program, strong commitment to inviting younger students to join me in top-tier research (while helping them gain the tools to do so), and experience as a student myself in the \href{http://glynnhonors.nd.edu/}{Glynn Family Honors Program} at the University of Notre Dame make me well prepared to make the most of a Teaching, Research, and Mentoring Fellowship.
+
+I use computational analyses of ecosystems, landscapes, and climate to help understand cultural patterns and transitions in prehistory\cite{Bocinsky2014_diss,DAlpoimGuedes2016_PNAS}. My past research projects are diverse: assessing landscape and site defensibility on the Northwest Coast of North America to study prehistoric warfare\cite{Bocinsky2014}; developing a new method for reconstructing high-resolution spatiotemporal climate fields from networks of regional tree-ring chronologies, with applications across the Southwestern US\cite{Bocinsky2014_NatComm, Schwindt2016, Bocinsky2016_SA}; statistical downscaling of global climate models to understand agricultural changes across Asia\cite{DAlpoimGuedes2015, DAlpoimGuedes2015_PLoSONE, DAlpoimGuedes2016_CA}; exploring the importance inter-visibility in the Chacoan world using region-scale view-shed analysis\cite{VanDyke2016}; and defining the complex history of the domestication of turkey in the Southwest\cite{Bocinsky2016_USC, Lipe2016}.
+
+My primary research focus is on the sustainability of traditional agricultural systems, and traditional ecosystem management and niche construction more generally. I am particularly interested in the coevolution of cultivar landraces and the selection contexts in which they arise---both natural and cultural. In one of my current projects I am using phenological simulations to model the potential yields of over one hundred varieties of Pueblo corn across the Southwest US under modern and simulated past climate/weather scenarios. I hope to identify the environmental conditions under which each of these modern varieties will thrive---and, by extension, the conditions in which each may have evolved. I am also co-directing research in southwestern China and eastern Africa to explore similar processes for traditional varieties of millet, wheat, and barley\cite{DAlpoimGuedes2015, DAlpoimGuedes2015_PLoSONE, DAlpoimGuedes2016_CA}. I am a Co-PI on a proposal to the \emph{Dynamics of Coupled Natural and Human Systems} program of the NSF for which I will lead agricultural, geomorphological, and agent-based modeling efforts to understand high-elevation agriculture on the Tibetan Plateau (awards should be announced in May). All of my crop modeling research documents phenological diversity among contemporary traditional cultivars---diversity that is a key to the resilience of small-scale, traditional agricultural communities, and diversity that will likely be useful to future populations in light of projected climate change. This research has brought me into collaboration with agronomists, agricultural modelers, maize geneticists, and climatologists, as well as contemporary traditional farmers. {\bf I would very much look forward to engaging Davidson students in these research projects, and would enjoy mentoring any student interested in data-driven, culturally-aware approaches to understanding the past, present, and future of humanity.}
+
+My ongoing research collaborations focus on large-scale environmental, geographic, and agent-based modeling. Since 2015, I've been a researcher with the SKOPE project---\emph{Synthesizing Knowledge of Past Environments}---where I have expanded the geographic reach of my paleoclimate reconstructions\cite{Bocinsky2014_NatComm} to encompass the entire US Southwest. This resulted in a high-profile publication defining periods of environmental exploration and exploitation in Pueblo prehistory\cite{Bocinsky2016_SA} (please see my attached writing sample). Our team was recently awarded an NSF cyber-infrastructure implementation grant (NSF SMA-1347973) to further expand the geographic extent of SKOPE and make it a tool for model inter-comparison and reproducible research. {\bf I'm a Co-PI on that grant focusing on expanding our database of paleoenvironmental models, and there are many opportunities for talented undergraduates to join in SKOPE research.} As a research associate at Crow Canyon, I am leading data analysis for the \emph{Pueblo Farming Project}---an eight-year experimental gardening collaboration with the Hopi tribe in northern Arizona. I've been developing an interactive exploratory data analysis website to be used primarily by students to learn about traditional agricultural techniques and crop landraces. I'm also the PI on a proposal to the National Endowment for the Humanities---the \emph{Crow Canyon Digital Archaeology Tools and Access} (CC-DATA) project---to modernize Crow Canyon’s research database and enable diverse forms of access for researchers, descendent communities, and the broader public. The project focuses on integrating legacy archaeological datasets with born-digital data, and will serve as an open-source model for other institutions that wish to bring their archaeological data holdings to diverse audiences. {\bf The CC-DATA project, should it receive funding, will include opportunities for students to access Crow Canyon's archaeological archive for innovative and exciting research projects.}
+
+The cross-disciplinary, multi-cultural, and geographic approach I have taken in my research has greatly informed my approach to mentoring students in the classroom and lab. As a graduate student at WSU, I was fortunate to have many opportunities to teach. I designed \emph{ANTH 331: The Americas Before Columbus}---an upper-level undergraduate review course about North and South American prehistory---as a course on model-based social science. I presented students with archaeological data from the Americas and various interpretations (models) that might explain those data, and challenged my students to take a goodness-of-fit approach to choosing between different explanations. In lieu of a final exam, I challenged  students to make academic-style, collaborative research posters, and hosted a two-day research symposium where students were invited to engage with and critically assess each other's work. As an instructor for \emph{ANTH 101: General Anthropology}, I emphasized a four-fields approach to anthropology that sought to break down barriers between the sub-disciplines and make all of anthropology relevant to my students' experiences, and focused on how diverse cultures and knowledge systems can present compelling solutions to contemporary problems. And in \emph{ANTH 490: Themes in Anthropology}---a fifteen-student senior capstone seminar---I challenged students to engage their anthropological training by confronting significant ethical issues today. {\bf I received exemplary student evaluations in each of these courses, with students commenting particularly on my engagement and enthusiasm in the classroom.}
+
+As a post-doctoral researcher, I co-taught a graduate course in exploratory data analysis in \emph{R} where I helped students develop testable hypotheses for complex data. The course also emphasized reproducible and robust computational methods. Students were required to script all of their analyses as executable papers, such that data, analysis (code), and interpretations were all available in a single document. I thoroughly enjoy working with students and colleagues on their research projects, and helping people do science that is more open and reproducible. I am back in Pullman during the winter of 2017, and have organized an R working group for the Anthropology department at WSU to continue building a community around reproducible empirical research in anthropology.
+
+{\bf My strengths in the classroom are most apparent when challenging students to critically assess their own biases, and when working through statistical and computational reasoning with students.} I tend to prefer informal, small-group, and activity-based learning settings where students are challenged to engage deeply with one-another, either in conversation about a course topic or to complete a particular task. I care deeply about empowering students to generate new knowledge through the learning and application of empirical (particularly computational) methods. I feel strongly that students need to learn \emph{tools to think with}, and I value statistical literacy and a basic understanding of evolutionary theory as key foundations of that toolkit. I would very much be interested in developing an honors undergraduate course in data analytics, focusing on the social sciences. Data literacy is not only important in academia and the workplace---it is essential in parsing the constant bombardment of information in today's "big data" world. Another course I would be excited to develop---perhaps in collaboration with another Fellow---would be a seminar on human dimensions of climate change, with a particular focus on how the diverse agricultural strategies of past and contemporary cultures might be an important key to a resilient future.
+
+I am very excited about the promise of the Teaching, Research, and Mentoring Fellows program as an innovative way to blend post-doctoral training in teaching and mentorship with honors education. Thank you for considering my application, and please contact me if I can be of any assistance.
+
+\thispagestyle{specialfooter}
+
+
+
+\closing{Sincerely,}
+\small
+{\bf Director}, \href{http://www.crowcanyon.org/institute/}{Research Institute, Crow Canyon Archaeological Center} \\
+{\bf Research Scientist}, \href{https://climate.umt.edu/}{Montana Climate Office, University of Montana} \\
+{\bf Research Faculty}, \href{http://www.dri.edu/earth-ecosystem-sciences}{Division of Earth and Ecosystem Sciences, Desert Research Institute} \vspace{0.1in}\\
+\begin{tabular}{@{}ll}
+{\bf phone} & 770-362-6659 \\            
+{\bf email} & \href{mailto:kbocinsky@crowcanyon.org}{kbocinsky@crowcanyon.org} \\         
+{\bf web} & \href{https://institute.crowcanyon.org/}{institute.crowcanyon.org}\\   
+\end{tabular}
+
+\emph{The Crow Canyon Archaeological Center acknowledges the Pueblo, Ute, Diné (Navajo), Jicarilla Apache, and Paiute people on whose traditional homelands we work and reside. We are grateful to all Indigenous people who continue to preserve and protect cultural traditions, maintain ancestral relationships, and steward these lands.}
+
+\vspace{0.5in}
+\bibliography{../PAPERS/Master}
+
+\end{letter}
+\end{document}

@@ -1,0 +1,91 @@
+\documentclass[letterpaper,11pt]{letter}
+
+\usepackage{fontspec}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+\setsansfont[Ligatures=TeX, % recommended
+   UprightFont={* Light},
+   ItalicFont={*-LightItalic},
+   BoldFont={*},
+   BoldItalicFont={* Italic}]{Roboto}
+
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{anysize}
+\marginsize{0.75in}{0.75in}{0in}{0in}
+\usepackage{nopageno}
+
+%%% HEADERS & FOOTERS
+
+\usepackage[hidelinks]{hyperref}
+
+\setlength{\parskip}{0.1in}
+\renewcommand{\closing}[1]{\par\nobreak\vspace{\parskip}% 
+\stopbreaks
+\noindent
+\ifx\@empty\fromaddress\else
+\hspace*{\longindentation}\fi
+\parbox{\indentedwidth}{\raggedright
+    \ignorespaces #1\\[0.0in]% 
+    \ifx\@empty\fromsig
+        \fromname
+\else \fromsig \fi\strut}%
+\par}
+
+
+\signature{\includegraphics[width=1.5in]{/Users/bocinsky/IMPORTANT/WSU/RESEARCH/ArticleStyles/WSU_Letter/signature.pdf} \\ R.~Kyle Bocinsky, PhD}
+
+%\signature{R.~Kyle Bocinsky}
+\address{R.~Kyle Bocinsky, PhD \\  
+Washington State University \\ 
+Pullman, WA  99164-4910 \vspace{0.1in}\\
+{\bf phone} \hspace{0.05in} 770.362.6659 \\
+{\bf email} \hspace{0.1in} \href{mailto:bocinsky@wsu.edu}{bocinsky@wsu.edu} \\
+}
+
+\longindentation=0pt
+\begin{document}
+%\raggedright
+\begin{letter}{}
+
+\centerline{\includegraphics[width=7in]{/Users/bocinsky/IMPORTANT/WSU/RESEARCH/ArticleStyles/WSU_Letter/Header.pdf}}
+
+\opening{To Whom It May Concern:}
+
+%% CCAC 
+%I am writing in application for the Director of Sponsored Projects position at Crow Canyon Archaeological Center, as advertised on the Crow Canyon website. I recently graduated with a PhD in anthropology from Washington State University, and am highly motivated to begin a career in archaeological research and education at Crow Canyon. My skills and experience in developing large grant proposals, managing classrooms and research, and producing grant deliverables for academic, government, and public audiences make me uniquely qualified to join Crow Canyon as the Director of Sponsored Projects.
+%
+%During the past seven years I have been a researcher, lead software developer, and GIS administrator for the \href{http://village.anth.wsu.edu}{\bf{Village Ecodynamics Project (VEP)}}. I co-authored several chapters in an edited volume detailing the first phase of VEP research, and oversaw the production of the figures for that volume. As part of phase two of the VEP, I restructured the geospatial databases used in VEP research, developed workflows for digitally recording archaeological sites in Mesa Verde National Park (as part of the \href{http://village.anth.wsu.edu/sites/village.anth.wsu.edu/files/publications/FINAL_REPORT_VEP_2012_noUTMs.pdf}{\bf{Mesa Verde Community Center Survey}}), and collaborated with the VEP IT team to make the Village computer simulation code available to other researchers. I also co-authored several academic publications of VEP research, and have given presentations---several at Crow Canyon---to professional and public audiences. In addition to coordinating research in the VEP, I have taught three undergraduate courses, managing classes of 15--90 students.
+%
+%As part of efforts to expand the scope and impact of VEP research, I co-developed several research proposals to the National Science Foundation with budgets between \$500,000 and \$1.5 million. I also helped write and am currently participating in a funded collaborative proposal---\href{http://envirecon.org}{\bf{Designing SKOPE: Synthesized Knowledge of Past Environments}}---for which WSU has an operating budget of \$102,000 of a total project budget of \$300,000. As a graduate student, I secured \$180,000 in competitive doctoral fellowships from the National Science Foundation. I am currently co-developing several other large NSF proposals focusing on human-environment interactions and traditional agriculture in the US Southwest, Africa, and upland China.
+%
+%I am very familiar with the mission and activities of Crow Canyon, having participated as a visiting researcher in 2011 and a research intern in 2012, and having collaborated closely with Crow researchers throughout the VEP. I feel that mission can be enhanced through expanded grant funding, including from private foundations and agencies that do not traditionally fund archaeological research. I look forward to discussing these opportunities with the Crow Canyon leadership.
+
+%% NPS Social Scientist Position
+I am writing in application for the Social Scientist position at Denali National Park and Preserve advertised on USAJOBS (job announcement number DENA-15-1484935DECB). I recently graduated with a PhD in anthropology from Washington State University, and am highly motivated to begin a career in the National Park Service. My extensive experience in developing and participating in interdisciplinary social science research makes me well qualified to join the social science research team at Denali.
+
+During the past six years I have been a lead developer and GIS administrator for the \href{http://village.anth.wsu.edu}{Village Ecodynamics Project (VEP)}, a pioneering effort to integrate archaeological data from the Ancestral Pueblo Southwest with soils, climate, and computer-simulated human settlement data, in order to better understand human responses to environmental change. Among many responsibilities, I led the development of the current VEP geospatial database that harmonizes data from several federal and state sources. I also coordinated the integration of new cultural resources datasets into our geodatabase, both by digitizing analog legacy maps using Adobe Illustrator, and by creating workflows for collecting new GPS data in Mesa Verde National Park (MVNP) using iPads. I was responsible for ensuring these new and digitized data were appropriately formatted and documented for delivery back to MVNP archaeologists and GIS staff. Although my work has primarily focused on cultural resources, many of my skills are immediately transferrable to the protection and restoration of natural resources. I am very proficient in using ArcGIS and GRASS GeoDatabases, Microsoft Access and SQLite databases, and geostatistical analysis in \emph{R}. I've also been part of a team seeking to advise the Federal government about how to better protect archaeological resources in the San Juan basin of northern New Mexico. In my current position as a post-doctoral researcher I am continuing to use these skills as well as integrating traditional GIS with modern web mapping systems. Through these experiences, I've gained the skills necessary to effectively translate data into 
+Attached please find a copy of my résumé, curriculum vit\ae, and transcripts from the University of Notre Dame (BA) and Washington State University (MA and PhD). Please do not hesitate to contact me at (770) 362-6659 or by email at \href{mailto:bocinsky@wsu.edu}{bocinsky@wsu.edu}. Thank you in advance for your consideration.
+
+
+%% NPS GIS POSITION
+%I am writing in application for the Department of Interior Environmental Protection Specialist position advertised on USAJOBS (job announcement number OS-6030-15-RD-102). I recently graduated with a PhD in anthropology from Washington State University, and am highly motivated to begin a career in the Department of Interior. My skills and experience in developing and managing large geospatial databases of landscape, climate, and archaeological data make me uniquely qualified to join the Office of Restoration and Damage Assessment team.
+%
+%During the past six years I have been a lead developer and GIS administrator for the \href{http://village.anth.wsu.edu}{Village Ecodynamics Project (VEP)}, a pioneering effort to integrate the most complete archaeological record in the Ancestral Pueblo Southwest with soils, climate, and computer-simulated human settlement data, in order to better understand human responses to environmental change. Among many responsibilities, I led the development of the current VEP GeoDatabase that harmonizes data from several federal and state sources. I also coordinated the integration of new cultural resources datasets into our GeoDatabase, both by digitizing analog legacy maps using Adobe Illustrator, and by creating workflows for collecting new GPS data in Mesa Verde National Park (MVNP) using iPads. I was responsible for ensuring these new and digitized data were appropriately formatted and documented for delivery back to MVNP archaeologists and GIS staff. Although my work has primarily focused on cultural resources, many of my skills are immediately transferrable to the protection and restoration of natural resources. I am very proficient in using ArcGIS and GRASS GeoDatabases, Microsoft Access and SQLite databases, and geostatistical analysis in \emph{R}. I've also been part of a team seeking to advise the Federal government about how to better protect archaeological resources in the San Juan basin of northern New Mexico. In my current position as a post-doctoral researcher I am continuing to use these skills as well as integrating traditional GIS with modern web mapping systems. 
+%%Attached please find a copy of my résumé, curriculum vit\ae, and transcripts from the University of Notre Dame (BA) and Washington State University (MA and PhD). Please do not hesitate to contact me at (770) 362-6659 or by email at \href{mailto:bocinsky@wsu.edu}{bocinsky@wsu.edu}. Thank you in advance for your consideration.
+
+%% NPS ARCHAEOLOGY POSITION
+%I am writing in application for the Glen Canyon National Recreation Area term archaeologist position advertised on USAJOBS (job announcement number AZSHRO 15-176 DEU-TRM). I recently graduated with a PhD in anthropology from Washington State University, and am highly motivated to begin a career in the Department of Interior. My skills and experience in southwestern archaeology and in developing and managing large geospatial databases of landscape, climate, and archaeological data make me highly qualified to join the National Parks Service.
+%
+%During the past seven years I have been an archaeological crew member and GIS administrator for the \href{http://village.anth.wsu.edu}{Village Ecodynamics Project (VEP)}, a pioneering effort to integrate the most complete archaeological record in the Ancestral Pueblo Southwest with soils, climate, and computer-simulated human settlement data, in order to better understand human responses to environmental change. Among many responsibilities, I led the development of the current VEP geodatabase that harmonizes data from several federal and state sources. I also coordinated the integration of new cultural resources datasets into our geodatabase, both by digitizing analog legacy maps using Adobe Illustrator, and by creating workflows for collecting new GPS data in Mesa Verde National Park (MVNP) using iPads. I was responsible for ensuring these new and digitized data were appropriately formatted and documented for delivery back to MVNP archaeologists and GIS staff. In my current position as a post-doctoral researcher at Washington State University I am continuing to use these skills as well as integrating traditional GIS with modern web mapping systems.
+%
+%I cut my teeth as an archaeologist as a crew member on the 2009--2012 Mesa Verde Community Center Survey in MVNP, and received further archaeological training as a field intern in 2012 at Crow Canyon Archaeological Center in Cortez, CO.
+%%Attached please find a copy of my résumé, curriculum vit\ae, and transcripts from the University of Notre Dame (BA) and Washington State University (MA and PhD). Please do not hesitate to contact me at (770) 362-6659 or by email at \href{mailto:bocinsky@wsu.edu}{bocinsky@wsu.edu}. Thank you in advance for your consideration.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
